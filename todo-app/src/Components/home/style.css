@@ -18,6 +18,10 @@
   z-index: 1;
   text-align: center;
 }
+.date_section{
+  margin-left:10px;
+  color: white;
+}
 
 @media (max-width: 800px) {
   .heading {

@@ -16,16 +16,19 @@ const Home:React.FC = () => {
 e.preventDefault()
 
 if(todo){
-  settodos([...todos,{id:Date.now(),todo:todo,isdone:false}])
+  settodos([...todos,{id:Date.now(),todo:todo,isDone:false}])
   setTodo('')
 
 }
     }
 
-    console.log(todos);
+ let date:Date=new Date();
   return (
     <div className="Home">
     <span className='heading'>To..Do.. App</span>
+    <div className='date_section'>
+      <h2><u>Date:{date.getDate()+"-"+date.getMonth()+"-"+date.getFullYear()}</u></h2>
+    </div>
     <Inputfield todo={todo} setTodo={setTodo} handleAdd={handleAdd}/>
 <TodoList todos={todos} setTodos={settodos}/>
     </div>
